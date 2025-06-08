@@ -11,7 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (mobileMenuButton && mobileMenu) {
         mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            const isExpanded = mobileMenu.classList.toggle('hidden');
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded); // Set to true if menu is visible
+
         });
 
         // Close mobile menu when a link is clicked
@@ -129,4 +131,33 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Back to Top Button Functionality
+    const backToTopButton = document.getElementById('back-to-top');
+
+    if (backToTopButton) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) { // Show button after scrolling 300px
+                backToTopButton.classList.add('back-to-top-visible');
+                backToTopButton.classList.remove('opacity-0', 'pointer-events-none');
+            } else {
+                backToTopButton.classList.remove('back-to-top-visible');
+                backToTopButton.classList.add('opacity-0', 'pointer-events-none');
+            }
+        }, { passive: true });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: prefersReducedMotionQuery.matches ? 'auto' : 'smooth'
+            });
+        });
+    }
+
+    // Ensure mobile menu button aria-expanded is correct on load
+    if (mobileMenuButton && mobileMenu) {
+        const isMenuHidden = mobileMenu.classList.contains('hidden');
+        mobileMenuButton.setAttribute('aria-expanded', !isMenuHidden);
+    }
+
 });

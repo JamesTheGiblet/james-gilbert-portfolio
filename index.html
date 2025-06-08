@@ -24,7 +24,7 @@
                 <a href="#contact" class="nav-link text-gray-600 hover:text-indigo-700 transition duration-300 rounded-lg p-2 hover:bg-gray-100">Contact</a>
             </div>
             <!-- Mobile Menu Button (Hamburger) - JavaScript for functionality -->
-            <button id="mobile-menu-button" class="md:hidden p-2 text-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <button id="mobile-menu-button" class="md:hidden p-2 text-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" aria-expanded="false" aria-controls="mobile-menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </div>
@@ -261,6 +261,14 @@
             &copy; <span id="current-year"></span> James Gilbert. All rights reserved.
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to Top" class="fixed bottom-6 right-6 bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-full shadow-lg transition-opacity duration-300 opacity-0 pointer-events-none focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+            <path d="M12 19V5"/>
+            <path d="m5 12 7-7 7 7"/>
+        </svg>
+    </button>
 
     <!-- Link to external JavaScript file -->
     <script src="script.js" defer></script>

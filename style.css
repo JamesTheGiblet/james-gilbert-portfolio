@@ -52,3 +52,9 @@ body {
     /* Hover effects can also be toned down if necessary */
     /* e.g., .transform.hover\:scale-105:hover { transform: none; } */
 }
+
+/* Style for the "Back to Top" button when visible */
+.back-to-top-visible {
+    opacity: 1 !important; /* Use !important to override Tailwind's opacity-0 if needed */
+    pointer-events: auto !important;
+}
