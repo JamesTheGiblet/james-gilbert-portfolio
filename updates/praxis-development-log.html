@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praxis Development Log - James Gilbert</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css"> <!-- Link to your main stylesheet -->
+    <style>
+        .post-container { max-width: 900px; margin: 30px auto; padding: 30px; background-color: #fff; border: 1px solid #ddd; box-shadow: 0 0 15px rgba(0,0,0,0.05); }
+        .post-container h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-bottom: 20px; }
+        .phase-summary { margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid #e5e7eb; }
+        .phase-summary:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0;}
+        .phase-title { color: #4f46e5; /* Indigo-700 */ }
+        .challenges-title { color: #db2777; /* Pink-600 */}
+        .modifications-title { color: #16a34a; /* Green-600 */}
+        .back-link-container { text-align: center; margin-top: 30px; padding: 10px; }
+        .back-link-container a { display: inline-block; padding: 10px 20px; background-color: #3498db; color: white; text-decoration: none; border-radius: 5px; transition: background-color 0.3s; }
+        .back-link-container a:hover { background-color: #2980b9; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="post-container">
+        <h1 class="text-4xl font-bold text-indigo-800">Praxis: The Evolving Journey</h1>
+        <p class="text-gray-600 mb-8">A log detailing the development phases, challenges overcome, and adaptations made during the creation of the Praxis Self-Evolving AI System.</p>
+
+        <div class="prose lg:prose-xl max-w-none text-gray-700 space-y-6">
+
+            <!-- Phase 1 Summary -->
+            <section class="phase-summary">
+                <h2 class="text-2xl font-semibold phase-title mb-3">🧩 Phase 1: Core Framework Initialization</h2>
+                <p class="italic text-gray-500 mb-2"><strong>Objective:</strong> Establish the foundational architecture and a stable runtime loop.</p>
+                <p>This phase focused on creating the structural backbone of Praxis. Key achievements included implementing the main event loop (`main.py`), the `ContextManager` for system state, the `MetaAgent` for orchestrating micro-agents, a basic `KnowledgeBase`, the initial `MutationEngine`, and a robust `Logger` system. The milestone was a bootable system with basic agent management and logging capabilities.</p>
+                
+                <h3 class="text-xl font-medium challenges-title mt-4 mb-2">Challenges Encountered:</h3>
+                <ul class="list-disc pl-5 text-sm">
+                    <li>Defining a flexible yet stable core loop that could accommodate future evolutionary changes.</li>
+                    <li>Initial design of the `MetaAgent` to be both a manager and a future point of higher-level decision making.</li>
+                    {/* <!-- Add more specific challenges for Phase 1 --> */}
+                </ul>
+
+                <h3 class="text-xl font-medium modifications-title mt-4 mb-2">Modifications to Plan:</h3>
+                <ul class="list-disc pl-5 text-sm">
+                    <li>Decided to implement a more detailed logging system earlier than planned due to initial debugging complexities.</li>
+                    {/* <!-- Add any significant deviations or learnings that altered the plan for Phase 1 --> */}
+                </ul>
+            </section>
+
+            <!-- Phase 2 Summary -->
+            <section class="phase-summary">
+                <h2 class="text-2xl font-semibold phase-title mb-3">🧠 Phase 2: Agentic Intelligence & Micro-Agent System</h2>
+                <p class="italic text-gray-500 mb-2"><strong>Objective:</strong> Build the decentralized, modular intelligence model.</p>
+                <p>Focused on developing the micro-agent base class (`core/agent_base.py`), task scheduling within the `MetaAgent`, local feedback loops for agent learning (RL and performance tracking), inter-agent communication (`engine/communication_bus.py`), and agent lifecycle management. The milestone was running multiple distinct agents that could learn, communicate, and evolve.</p>
+                
+                <h3 class="text-xl font-medium challenges-title mt-4 mb-2">Challenges Encountered:</h3>
+                <ul class="list-disc pl-5 text-sm">
+                    <li>Designing an efficient and non-blocking communication bus for asynchronous agent interactions.</li>
+                    <li>Initial implementation of the Q-learning mechanism for `AgentRLSystem`.</li>
+                </ul>
+                <h3 class="text-xl font-medium modifications-title mt-4 mb-2">Modifications to Plan:</h3>
+                <ul class="list-disc pl-5 text-sm">
+                    <li>Simplified the initial inter-agent communication protocol to get a working model faster, with plans to enhance it later.</li>
+                </ul>
+            </section>
+
+            {/* <!-- Add similar sections for Phases 3, 4, 5, 6 --> */}
+            
+            {/* <!-- Phase 7 Summary (Current) --> */}
+            <section class="phase-summary">
+                <h2 class="text-2xl font-semibold phase-title mb-3">🧠 Phase 7: Advanced Cognitive Development & Organizational Intelligence (Praxis MK2)</h2>
+                <p class="italic text-gray-500 mb-2"><strong>Objective:</strong> Integrate intrinsic motivation, basic creativity, open-ended goal setting, and higher-order cognitive abilities.</p>
+                <p>Currently, this major phase is underway, aiming to significantly elevate Praxis's intelligence. Work involves integrating foundational elements of intrinsic motivation, rudimentary creativity, open-ended goal setting, and higher-order cognitive functions like metacognition and advanced planning. A key aspect is developing a more sophisticated, self-organizing hierarchical agent structure (the "Praxis Organization" model) to enable greater autonomy and the ability to tackle more complex, ambiguous problems. Progress is being made on enhancing self-awareness through detailed failure/confidence logging and enabling agents to act more proactively.</p>
+                
+                <h3 class="text-xl font-medium challenges-title mt-4 mb-2">Ongoing Challenges:</h3>
+                <ul class="list-disc pl-5 text-sm">
+                    <li>Defining robust metrics for "curiosity" or "intrinsic motivation" in agents.</li>
+                    <li>Designing the hierarchical agent structure to allow for effective delegation and escalation without becoming overly rigid.</li>
+                    <li>Balancing exploration (creativity) with exploitation (efficiency) in agent behavior.</li>
+                </ul>
+                 <h3 class="text-xl font-medium modifications-title mt-4 mb-2">Modifications to Plan (So Far):</h3>
+                <ul class="list-disc pl-5 text-sm">
+                    <li>Prioritized the metacognition foundation (enhanced logging) as a prerequisite for more complex intrinsic drives.</li>
+                </ul>
+            </section>
+
+            <p class="mt-6">
+                For a complete overview of the Praxis project, including its current features, architecture, and full phased plan, please visit the main project page:
+                <a href="praxis-project.html" class="text-indigo-600 hover:underline font-semibold">Praxis - Self-Evolving AI System Details</a>.
+            </p>
+        </div>
+
+        <div class="back-link-container">
+            <a href="../index.html#updates">← Back to All Updates</a>
+        </div>
+    </div>
+</body>
+</html>
