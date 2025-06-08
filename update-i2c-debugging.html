@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Tip: Debugging I2C on Raspberry Pi - James Gilbert</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Link to your main stylesheet -->
+    <style>
+        .post-container { max-width: 800px; margin: 30px auto; padding: 30px; background-color: #fff; border: 1px solid #ddd; box-shadow: 0 0 15px rgba(0,0,0,0.05); }
+        .post-container h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-bottom: 20px; }
+        .post-meta { color: #777; font-size: 0.9em; margin-bottom: 20px; }
+        .back-link-container { text-align: center; margin-top: 30px; padding: 10px; }
+        .back-link-container a { display: inline-block; padding: 10px 20px; background-color: #3498db; color: white; text-decoration: none; border-radius: 5px; transition: background-color 0.3s; }
+        .back-link-container a:hover { background-color: #2980b9; }
+        code { background-color: #f0f0f0; padding: 0.2em 0.4em; margin: 0; font-size: 85%; border-radius: 3px; }
+        pre code { display: block; padding: 1em; overflow-x: auto; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="post-container">
+        <h1 class="text-4xl font-bold text-indigo-800">Quick Tip: Debugging I2C on Raspberry Pi</h1>
+        <p class="post-meta">Posted by James Gilbert on <time datetime="2023-10-05">October 05, 2023</time></p>
+        
+        <div class="prose lg:prose-xl max-w-none text-gray-700 space-y-6">
+            <p>
+                Anyone who has worked with microcontrollers and sensors knows that I2C (Inter-Integrated Circuit) communication can sometimes be a bit finicky to set up. Recently, while working on integrating a new sensor with Gismo, I ran into some classic "why isn't this device showing up?" issues.
+            </p>
+            <p>
+                After checking the wiring for the umpteenth time (always a good first step!), ensuring pull-up resistors were correctly in place (if not on the breakout board), and verifying the I2C interface was enabled on the Raspberry Pi (via <code>sudo raspi-config</code>), I turned to a trusty command-line tool: <code>i2cdetect</code>.
+            </p>
+            <p>
+                This little utility is part of the <code>i2c-tools</code> package, which you can install on your Raspberry Pi if you don't have it already:
+            </p>
+            <pre><code class="language-bash">sudo apt-get install i2c-tools</code></pre>
+            <p>
+                Once installed, you can scan the I2C bus to see which addresses have devices responding. For a Raspberry Pi Model B (like the Pi Zero 2W I use in Gismo), the I2C bus is typically bus 1. You run the command like this:
+            </p>
+            <pre><code class="language-bash">sudo i2cdetect -y 1</code></pre>
+            <p>
+                The <code>-y</code> flag disables interactive mode, which is usually fine for a quick scan. The output is a grid of I2C addresses, and if a device is detected at a particular address, its address number will appear in the grid (e.g., <code>40</code>, <code>68</code>). If it shows <code>--</code>, no device responded at that address.
+            </p>
+            <figure>
+                <img src="placeholder-i2cdetect-output.png" alt="Example i2cdetect output" class="rounded shadow-lg mx-auto">
+                <figcaption class="text-center text-sm text-gray-600 mt-2">Example output of i2cdetect (Placeholder - Replace with actual screenshot if possible)</figcaption>
+            </figure>
+            <p>
+                This simple command saved me a lot of headache. It quickly confirmed whether the Pi could "see" the sensor at all. If the sensor's expected address didn't show up, I knew the problem was likely in the wiring, power, or a faulty sensor, rather than a software issue in my Python code. If the address *did* show up, but my code still couldn't communicate, then I could focus my debugging on the software side (e.g., correct library usage, address mismatch in code).
+            </p>
+            <p>
+                It's a fundamental tool for hardware debugging with I2C devices on the Raspberry Pi, and a great first check before diving into more complex software troubleshooting. Hope this helps someone else out there!
+            </p>
+        </div>
+
+        <div class="back-link-container">
+            <a href="index.html#updates">← Back to All Updates</a>
+        </div>
+    </div>
+</body>
+</html>
