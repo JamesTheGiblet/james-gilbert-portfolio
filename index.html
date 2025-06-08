@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Gilbert: Amateur Inventor, Professional Tinkerer</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter for clean typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb; /* Light gray background */
+        }
+        /* Custom scroll-behavior for smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Style for the navigation active state (optional, for JS if added) */
+        .nav-link.active {
+            font-weight: bold;
+            color: #4f46e5; /* Indigo-700 */
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 p-4 bg-white shadow-md rounded-b-xl">
+        <div class="container mx-auto flex items-center justify-between px-6">
+            <a href="#hero" class="text-2xl font-bold text-indigo-700 rounded-lg p-2 hover:bg-indigo-50 transition duration-300">James Gilbert</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-indigo-700 transition duration-300 rounded-lg p-2 hover:bg-gray-100">About Me</a>
+                <a href="#skills" class="text-gray-600 hover:text-indigo-700 transition duration-300 rounded-lg p-2 hover:bg-gray-100">Skills</a>
+                <a href="#projects" class="text-gray-600 hover:text-indigo-700 transition duration-300 rounded-lg p-2 hover:bg-gray-100">Projects</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-700 transition duration-300 rounded-lg p-2 hover:bg-gray-100">Contact</a>
+            </div>
+            <!-- Mobile Menu Button (Hamburger) - JavaScript for functionality -->
+            <button id="mobile-menu-button" class="md:hidden p-2 text-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-4 rounded-b-xl">
+            <a href="#about" class="block px-6 py-2 text-gray-600 hover:bg-indigo-50 hover:text-indigo-700">About Me</a>
+            <a href="#skills" class="block px-6 py-2 text-gray-600 hover:bg-indigo-50 hover:text-indigo-700">Skills</a>
+            <a href="#projects" class="block px-6 py-2 text-gray-600 hover:bg-indigo-50 hover:text-indigo-700">Projects</a>
+            <a href="#contact" class="block px-6 py-2 text-gray-600 hover:bg-indigo-50 hover:text-indigo-700">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="flex items-center justify-center min-h-screen text-white bg-gradient-to-br from-indigo-700 to-purple-800 p-6">
+        <div class="container mx-auto px-6 py-24 text-center">
+            <!-- Lightbulb Icon (Lucide equivalent SVG) -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-6 text-white w-24 h-24">
+                <path d="M15 14v1c0 2.21-1.79 4-4 4H9a4 4 0 0 1-4-4v-1a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6Z"/>
+                <path d="M9 19h6"/>
+                <path d="M8 20v1"/>
+                <path d="M16 20v1"/>
+                <path d="M12 21v1"/>
+                <path d="M12 3a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/>
+            </svg>
+            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-4">
+                James Gilbert: Amateur Inventor, Professional Tinkerer
+            </h1>
+            <p class="text-xl md:text-2xl opacity-90 mb-8">
+                Turning "I wonder if..." into "Here's how I did it."
+            </p>
+            <a href="#projects" class="inline-block px-8 py-4 text-lg font-semibold text-indigo-700 bg-white rounded-full shadow-lg hover:bg-gray-100 transition duration-300">
+                Explore My Creations
+            </a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-gray-50 p-6">
+        <div class="container mx-auto md:w-3/4 lg:w-2/3 px-6">
+            <h2 class="text-4xl font-bold text-center text-indigo-800 mb-12">About Me</h2>
+            <div class="space-y-8 text-lg leading-relaxed">
+                <p>
+                    I am James Gilbert, an individual driven by an insatiable curiosity and an unwavering belief in the power of invention. From the intricate gears of a watch to the complex lines of code, I am a maker at heart, constantly pushing boundaries and asking, "I wonder if..." My journey is one of continuous learning and self-improvement, fueled by a deep desire to understand the world and create innovative solutions.
+                </p>
+                <p>
+                    My path has led me through diverse fields – carpentry, locksmithing, electronics, and now, the exciting realms of 3D printing, robotics, and AI. Each step has been a testament to my adaptability and my ability to quickly master new disciplines. I embrace technology as a stepping stone to greater things, always seeking ways to amplify human potential through intelligent design and tenacious execution.
+                </p>
+                <p>
+                    Life has presented its own unique challenges, shaping who I am today. As the middle of three children and the only boy, I learned early on to navigate complex dynamics. When my father left at 16, it added a significant layer of responsibility and self-reliance. Furthermore, I was neurodiverse before the term was widely understood, making my learning and adaptation journey particularly challenging, yet ultimately, a source of immense strength.
+                </p>
+                <p>
+                    My formal schooling days were marked by mostly C and D grades, and my childhood dream was to become an astronaut. Yet, despite being told "no" by many, everything I know and do today has been learned and achieved after leaving school. This relentless pursuit of knowledge and creation isn't for external validation; it's a deeply personal mission to prove to myself, every single day, that I am not stupid. This internal drive translates into a unique approach: <strong class="text-indigo-700">I constantly refine, process, and optimize my understanding and methods, leading to ever-increasing efficiency and mastery.</strong> This empowers me to overcome obstacles, embrace complex problems, and relentlessly learn. My work ethic is rooted in efficiency and meticulous planning, but I'm equally prepared to "dive in and work it out as I go," learning valuable lessons from every challenge. I find immense joy in the creative process and strive to inspire others, especially neurodiverse individuals, to embark on their own journeys of discovery and invention.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white p-6">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-indigo-800 mb-12">My Expertise</h2>
+            <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Technical Skills Card -->
+                <div class="p-8 bg-gray-100 rounded-xl shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <!-- Code Icon (Lucide equivalent SVG) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 mb-4 text-indigo-600">
+                        <path d="m5 12 7-7 7 7"/>
+                        <path d="m12 19 7-7-7-7"/>
+                        <path d="M12 19v-7"/>
+                    </svg>
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">Technical Skills</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><span class="font-medium">Programming:</span> Python, C++, Java, HTML, CSS</li>
+                        <li><span class="font-medium">3D Printing:</span> FDM, SLA/DLP, RepRap, Marlin, Klipper, Duet3d, Building & Repair</li>
+                        <li><span class="font-medium">3D Modeling:</span> Blender, SketchUp, 3D Builder, CAD/CAM</li>
+                        <li><span class="font-medium">Robotics:</span> Design, Programming, Sensor Integration, Computer Vision</li>
+                        <li><span class="font-medium">Electronics:</span> Soldering, Troubleshooting, Microcontrollers (Arduino, Raspberry Pi, Microbit)</li>
+                    </ul>
+                </div>
+
+                <!-- Business & Entrepreneurial Skills Card -->
+                <div class="p-8 bg-gray-100 rounded-xl shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <!-- TrendingUp Icon (Lucide equivalent SVG) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 mb-4 text-purple-600">
+                        <path d="M16 17 22 11 17 5"/>
+                        <path d="M22 11h-7.5l-4.5 8h-4.5l-3.5-3.5 3.5-3.5h7"/>
+                    </svg>
+                    <h3 class="text-2xl font-semibold text-purple-700 mb-4">Business & Entrepreneurial</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><span class="font-medium">Business Ownership:</span> Giblets Creations (CEO & Founder)</li>
+                        <li><span class="font-medium">Sales & Marketing:</span> Processes, Operations, Advertising, B2B</li>
+                        <li><span class="font-medium">Project Management:</span> Production, Coordination</li>
+                        <li><span class="font-medium">Customer Service:</span> Operations, Support, Satisfaction</li>
+                        <li><span class="font-medium">Quality Management:</span> QC, Lean Manufacturing, Testing</li>
+                        <li><span class="font-medium">Web Design:</span> Shopify</li>
+                    </ul>
+                </div>
+
+                <!-- Practical & Manual Skills Card -->
+                <div class="p-8 bg-gray-100 rounded-xl shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <!-- Hammer Icon (Lucide equivalent SVG) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 mb-4 text-green-600">
+                        <path d="m14 10-2-2m-2-2-2-2M9 16l-2-2M7 14l-2-2m2 2 4 4 4 4m2 2-2-2m2-2-2-2m2 2 2-2M10 10l-2-2m-2-2-2-2"/>
+                    </svg>
+                    <h3 class="text-2xl font-semibold text-green-700 mb-4">Practical & Manual</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><span class="font-medium">Carpentry:</span> 1st & 2nd fix, Bespoke (10+ years)</li>
+                        <li><span class="font-medium">Maintenance & Repair:</span> General, AV, Electrical, Plumbing, Upholstery</li>
+                        <li><span class="font-medium">Troubleshooting:</span> Diverse Systems (10+ years)</li>
+                        <li><span class="font-medium">Soldering & Mechanical Assembly</span></li>
+                        <li><span class="font-medium">Lock Picking</span> (Trainee Experience)</li>
+                        <li><span class="font-medium">Driving:</span> CSCS license, DBS Certificate</li>
+                    </ul>
+                </div>
+
+                <!-- Interpersonal & Soft Skills Card -->
+                <div class="p-8 bg-gray-100 rounded-xl shadow-lg md:col-span-2 lg:col-span-1 transform hover:scale-105 transition duration-300 ease-in-out">
+                    <!-- Users Icon (Lucide equivalent SVG) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 mb-4 text-blue-600">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    <h3 class="text-2xl font-semibold text-blue-700 mb-4">Interpersonal & Soft Skills</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><span class="font-medium">Communication & Presentations</span></li>
+                        <li><span class="font-medium">Problem Solving & Time Management</span></li>
+                        <li><span class="font-medium">Management:</span> Team, Operations, Inventory</li>
+                        <li><span class="font-medium">Adaptability & Learning Agility</span></li>
+                        <li><span class="font-medium">Research</span></li>
+                        <li><span class="font-medium">Software:</span> Microsoft Office, Excel, Zendesk, Virtual Teams</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50 p-6">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-indigo-800 mb-12">My Creations & Ventures</h2>
+            <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+                <!-- Project Card: Praxis - Self-Evolving AI System -->
+                <div class="p-8 bg-white rounded-xl shadow-lg flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out">
+                    <!-- Brain Icon (Lucide equivalent SVG) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 mb-4 text-orange-600">
+                        <path d="M12 2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2Z"/>
+                        <path d="M9 14.75a4 4 0 0 1-5 2.5 2.5 2.5 0 0 1-2.5-2.5v-1.5A2.5 2.5 0 0 1 4 10.75a4 4 0 0 1 5 2.5"/>
+                        <path d="M15 14.75a4 4 0 0 0 5 2.5 2.5 2.5 0 0 0 2.5-2.5v-1.5A2.5 2.5 0 0 0 20 10.75a4 4 0 0 0-5 2.5"/>
+                    </svg>
+                    <h3 class="text-2xl font-semibold text-orange-700 mb-3">Praxis: Self-Evolving AI System</h3>
+                    <p class="text-gray-700 mb-4">
+                        My latest ambitious project: an experimental, modular AI architecture designed to evolve, monitor itself, learn from inefficiencies, and dynamically restructure. Inspired by biological systems, Praxis aims for emergent intelligence through iterative evolution, incorporating MetaAgents, TaskAgents, SkillAgents, and a robust KnowledgeBase.
+                    </p>
+                    <a href="#" class="text-indigo-600 hover:underline font-semibold">Learn More (Coming Soon!)</a>
+                </div>
+
+                <!-- Project Card: Giblets Creations -->
+                <div class="p-8 bg-white rounded-xl shadow-lg flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out">
+                    <!-- Layers Icon (Lucide equivalent SVG) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 mb-4 text-rose-600">
+                        <path d="m12.83 2.94-9.3 4.7a2 2 0 0 0-1.1 1.77v6.59a2 2 0 0 0 1.1 1.77l9.3 4.7a2 2 0 0 0 1.8 0l9.3-4.7a2 2 0 0 0 1.1-1.77V9.41a2 2 0 0 0-1.1-1.77l-9.3-4.7a2 2 0 0 0-1.8 0Z"/>
+                        <path d="m2 8.5 10 5 10-5"/>
+                        <path d="m2 12.5 10 5 10-5"/>
+                    </svg>
+                    <h3 class="text-2xl font-semibold text-rose-700 mb-3">Giblets Creations</h3>
+                    <p class="text-gray-700 mb-4">
+                        My entrepreneurial venture where I designed and manufactured 3D-printed model kits, focusing on 1980s nostalgia. I managed my own 3D printer farm (using SLA, DLP, FDM technologies) and handled all aspects from production to sales via various online platforms and events.
+                    </p>
+                    <a href="#" class="text-indigo-600 hover:underline font-semibold">View Past Work (Archived)</a>
+                </div>
+
+                <!-- Project Card: Gismo - Multi-Sensor Robot -->
+                <div class="p-8 bg-white rounded-xl shadow-lg flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out">
+                    <!-- Settings Icon (Lucide equivalent SVG) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 mb-4 text-cyan-600">
+                        <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.78 1.28a2 2 0 0 0 .73 2.73l.04.02a2 2 0 0 1 .97 1.95v.44a2 2 0 0 1-.97 1.95l-.04.02a2 2 0 0 0-.73 2.73l.78 1.28a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.78-1.28a2 2 0 0 0-.73-2.73l-.04-.02a2 2 0 0 1-.97-1.95v-.44a2 2 0 0 1 .97-1.95l.04-.02a2 2 0 0 0 .73-2.73l-.78-1.28a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2Z"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                    <h3 class="text-2xl font-semibold text-cyan-700 mb-3">Gismo: Multi-Sensor Robot</h3>
+                    <p class="text-gray-700 mb-4">
+                        A personal robotics project showcasing advanced sensor integration. Gismo is a multi-sensor bot built with a Raspberry Pi Zero 2W, integrating various components like PCA9685, SSD1306, MPU9250, Pi Camera, servos, and a suite of sensors (edge, IR, touch, ultrasonic, sound). It features functional motor control.
+                    </p>
+                    <a href="#" class="text-indigo-600 hover:underline font-semibold">Explore Gismo's Build</a>
+                </div>
+
+                <!-- Project Card: Large-Scale 3D Printer Build -->
+                <div class="p-8 bg-white rounded-xl shadow-lg flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out">
+                    <!-- GitPullRequest Icon (Lucide equivalent SVG) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 mb-4 text-teal-600">
+                        <circle cx="18" cy="18" r="3"/>
+                        <circle cx="6" cy="6" r="3"/>
+                        <path d="M13 6h3a2 2 0 0 1 2 2v7"/>
+                        <path d="M6 13v3a2 2 0 0 0 2 2h7"/>
+                        <path d="M18 6l-5 5"/>
+                    </svg>
+                    <h3 class="text-2xl font-semibold text-teal-700 mb-3">Custom 1.2m 3D Printer Build</h3>
+                    <p class="text-gray-700 mb-4">
+                        A significant engineering feat involving the construction of a 1.2-meter 3D printer. This project featured independent heated beds, a Duet Mini 5, toolboard, and a Raspberry Pi, requiring extensive problem-solving and troubleshooting during its design and assembly.
+                    </p>
+                    <a href="#" class="text-indigo-600 hover:underline font-semibold">See the Build Process</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-indigo-700 text-white p-6">
+        <div class="container mx-auto text-center px-6">
+            <!-- Mail Icon (Lucide equivalent SVG) -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-16 h-16 mx-auto mb-6 text-white">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+            <h2 class="text-4xl font-bold mb-8">Get In Touch</h2>
+            <p class="text-xl mb-8">
+                Have a project idea? Looking to collaborate? Or just want to discuss the future of tinkering?
+                I'm always eager to connect with fellow enthusiasts and potential partners.
+            </p>
+            <div class="text-lg">
+                <p class="mb-2">Email: <a href="mailto:james.gilbert@example.com" class="font-semibold underline hover:text-indigo-200 transition duration-300">james.gilbert@example.com</a></p>
+                <p class="mb-4">LinkedIn: <a href="https://www.linkedin.com/in/jamesgilbert" target="_blank" rel="noopener noreferrer" class="font-semibold underline hover:text-indigo-200 transition duration-300">linkedin.com/in/jamesgilbert</a></p>
+                <p class="italic opacity-80 mt-6">
+                    (Note: Placeholder email and LinkedIn URL. Please replace with your actual details.)
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-gray-600 bg-gray-200 p-6">
+        <div class="container mx-auto">
+            &copy; <span id="current-year"></span> James Gilbert. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
