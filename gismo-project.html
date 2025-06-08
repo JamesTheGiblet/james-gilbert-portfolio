@@ -117,21 +117,36 @@
                         <li>[Any custom libraries/modules you wrote]</li>
                     </ul>
                 </li>
-                <li>Functionality: Motor control, sensor data acquisition, basic navigation algorithms (e.g., obstacle avoidance).</li>
-                <li>[Add more details about your software architecture, specific algorithms, or interesting coding challenges]</li>
+                <li>Functionality: Motor control, sensor data acquisition, basic navigation algorithms (e.g., obstacle avoidance, dead reckoning for path estimation).</li>
+                <li>[Add more details about your software architecture, specific algorithms (like how dead reckoning is implemented or used), or interesting coding challenges]</li>
             </ul>
             
             <h2 class="text-2xl font-semibold text-indigo-700 mt-8">Build Process & Challenges</h2>
             <p>
-                [Describe the physical construction (e.g., chassis, assembly), wiring intricacies, and any specific challenges faced during the build. This could include component integration, power management hurdles, debugging sensor interference, or refining movement mechanics. What did you learn from these challenges?]
+                The construction of Gismo was an iterative journey, starting with a custom 3D-printed chassis designed to house all components compactly and allow for easy access. This was followed by gradually integrating each sensor and actuator. Wiring was a significant challenge, meticulously routing connections for the numerous components to the Raspberry Pi and PCA9685 servo driver while keeping the build clean and manageable.
+            </p>
+            <p>
+                Key challenges encountered included:
+            </p>
+            <ul class="list-disc space-y-1 pl-5">
+                <li><strong>Component Integration:</strong> Ensuring all sensors (ultrasonic, IR, IMU, edge sensors, touch, sound) communicated reliably with the Pi, often requiring careful library selection and debugging of I2C and GPIO interactions.</li>
+                <li><strong>Power Management:</strong> Balancing the power requirements of the motors, servos, Pi, and various sensors from a single LiPo battery, and mitigating potential electrical noise from the motors affecting sensor readings.</li>
+                <li><strong>Sensor Calibration & Interference:</strong> Fine-tuning the sensitivity of sensors like the ultrasonic and sound sensor, and addressing potential interference between them. Calibrating the MPU9250 IMU was also a detailed process.</li>
+                <li><strong>Movement Mechanics:</strong> Achieving smooth and predictable movement with the DC motors and L298N driver, including refining PWM values for speed control and turning.</li>
+                <li><strong>Software Debugging:</strong> Iteratively developing and debugging the Python code for sensor polling, motor control logic, obstacle avoidance algorithms, and the state machine for Gismo's "face" expressions.</li>
+            </ul>
+            <p>
+                This project was a profound learning experience, reinforcing the importance of modular design for easier debugging, systematic troubleshooting, and the practical application of electronics and programming skills in a complex, integrated system. The "dive in and figure it out" approach was essential, leading to many "aha!" moments and a much deeper understanding of robotics.
             </p>
 
             <h2 class="text-2xl font-semibold text-indigo-700 mt-8">Future Enhancements</h2>
             <ul class="list-disc space-y-1 pl-5">
                 <li>Integration of advanced sensors (e.g., LIDAR or Time-of-Flight).</li>
                 <li>Machine learning for object recognition and more sophisticated decision-making.</li>
-                <li>Enhanced navigation algorithms for complex environments (e.g., SLAM).</li>
-                <li>[Any other ideas you have for Gismo's future]</li>
+                <li>Enhanced navigation algorithms for complex environments, potentially incorporating SLAM (Simultaneous Localization and Mapping) capabilities.</li>
+                <li>Implementation of voice command recognition for more natural interaction.</li>
+                <li>Development of a web interface for remote monitoring and control.</li>
+                <li>Improved power efficiency and battery management for longer operational times.</li>
             </ul>
 
             <h2 class="text-2xl font-semibold text-indigo-700 mt-8">Setup & Usage</h2>
