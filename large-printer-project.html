@@ -20,29 +20,42 @@
         <h1 class="text-4xl font-bold text-indigo-800">Project: Custom 1.2m 3D Printer Build</h1>
         
         <div class="prose lg:prose-xl max-w-none text-gray-700 space-y-6">
-            <p>
-                <em>Detailed overview of the design, construction, and features of the custom 1.2-meter 3D printer. This includes mechanical design choices, electronics selection, firmware configuration, and challenges overcome.</em>
+            <p class="lead text-lg italic">
+                A monumental engineering project undertaken during my time at E3D, this custom-built FDM 3D printer boasts an overall footprint of 2m x 2m x 3m and a massive 1.2m square build area.
             </p>
             <p>
-                This project was a significant undertaking to design and build a large-format FDM 3D printer from scratch, aiming for a substantial 1.2-meter build envelope. The primary motivation was to create a machine capable of producing large-scale parts and to deepen my understanding of 3D printer mechanics, electronics, and firmware.
+                The primary objective was to create a high-performance, large-format machine capable of producing substantial parts with precision and reliability. This build pushed the boundaries of my understanding of 3D printer mechanics, advanced electronics integration, firmware configuration, and large-scale system design. It was a complex and rewarding challenge, culminating in a truly unique piece of additive manufacturing hardware.
             </p>
 
             <h2 class="text-2xl font-semibold text-indigo-700 mt-8">Key Design Features & Components</h2>
-            <ul>
-                <li>Build Volume: Approximately 1.2m x 1.2m x [Z-height]m</li>
-                <li>Motion System: [e.g., CoreXY, H-Bot, Cartesian - specify]</li>
-                <li>Frame Construction: [e.g., Aluminum extrusions - specify profile]</li>
-                <li>Controller: Duet Mini 5</li>
-                <li>Extruder & Hotend: Duet Toolboard, [Specify extruder/hotend type, e.g., E3D V6/Volcano]</li>
-                <li>Heated Bed: Independent heated bed segments for power efficiency and zone control.</li>
-                <li>Firmware: [e.g., RepRapFirmware, Klipper]</li>
-                <li>Additional Integration: Raspberry Pi for [e.g., Klipper host, Duet Web Control interface]</li>
-                <!-- Add more specific details -->
+            <ul class="list-disc space-y-1 pl-5">
+                <li><strong>Massive Build Volume:</strong> 1.2m x 1.2m x [Specify Z-height, e.g., ~1m] build area within a 2m x 2m x 3m overall machine size.</li>
+                <li><strong>Motion System:</strong> [Specify motion system, e.g., CoreXY, Cartesian with specific linear motion components].</li>
+                <li><strong>Frame Construction:</strong> Robust frame built with [Specify material, e.g., heavy-duty aluminum extrusions, welded steel].</li>
+                <li><strong>Advanced Controller:</strong> Duet Mini 5 for precise motion control and system management.</li>
+                <li><strong>High-Performance Extrusion:</strong>
+                    <ul class="list-circle pl-5">
+                        <li>Belt-driven E3D Hemera hotend.</li>
+                        <li>E3D High-Temp Revo hotend.</li>
+                        <li>Large 1.4mm nozzle for rapid material deposition.</li>
+                        <li>Duet Toolboard mounted on the Hemera for clean wiring and direct control.</li>
+                    </ul>
+                </li>
+                <li><strong>Quad Independent Heated Beds:</strong> Four independently controlled heated bed segments for optimal temperature management across the large build surface, powered by a dedicated PSU.</li>
+                <li><strong>Precision Bed Leveling & Homing:</strong>
+                    <ul class="list-circle pl-5">
+                        <li>IR (Infrared) level sensor for accurate bed mapping.</li>
+                        <li>Sensorless homing capabilities.</li>
+                    </ul>
+                </li>
+                <li><strong>System Integration:</strong> Raspberry Pi with a dedicated screen for user interface and system monitoring (e.g., running Duet Web Control or KlipperScreen).</li>
+                <li><strong>Power Management:</strong> Independent power supply for the heated beds, controlled via a relay interfaced with the Raspberry Pi and Duet controller.</li>
+                <li><strong>Firmware:</strong> [Specify firmware, e.g., RepRapFirmware on the Duet, potentially Klipper with the Pi].</li>
             </ul>
 
             <h2 class="text-2xl font-semibold text-indigo-700 mt-8">Engineering Challenges & Solutions</h2>
             <p>
-                [Discuss specific challenges like frame rigidity at scale, bed leveling for a large surface, wiring management, firmware tuning, and how you addressed them.]
+                Building a printer of this scale presented numerous unique challenges. Ensuring frame rigidity across a 2-meter span, managing thermal expansion and achieving consistent heating across four independent 0.6m x 0.6m bed segments, and implementing reliable bed leveling with an IR sensor over such a large area were critical hurdles. Wiring management for the extensive electronics, including the toolboard and multiple bed heaters with their own PSU and relay system, required meticulous planning. Firmware configuration for sensorless homing, the Duet Mini 5, and coordinating with the Raspberry Pi also demanded significant troubleshooting and fine-tuning. [Add any other specific challenges and how you solved them, e.g., belt tensioning, motion system calibration, material handling for large prints].
             </p>
             
             <h2 class="text-2xl font-semibold text-indigo-700 mt-8">Outcomes & Learnings</h2>
