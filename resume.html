@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Gilbert - Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9fafb;
+            color: #333;
+        }
+        .resume-container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 5px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .contact-info {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 0.95em;
+        }
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .section h2 {
+            font-size: 1.6em;
+            color: #3498db;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+        .section h3 {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .job-title, .project-title {
+            font-weight: bold;
+        }
+        .date-location {
+            font-style: italic;
+            color: #777;
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .skills-category {
+            margin-bottom: 15px;
+        }
+        .skills-category strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .print-button-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        @media print {
+            body {
+                background-color: #fff;
+                font-size: 10pt; /* Adjust for print */
+            }
+            .resume-container {
+                border: none;
+                box-shadow: none;
+                margin: 0;
+                max-width: 100%;
+                padding: 0;
+            }
+            .print-button-container, .back-link-container {
+                display: none;
+            }
+            h1, h2, h3 {
+                color: #000 !important; /* Ensure text is black for printing */
+            }
+            a {
+                color: #000 !important;
+                text-decoration: none; /* Optionally remove underline for print */
+            }
+            /* Add any other print-specific styles */
+        }
+        .back-link-container {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+        }
+        .back-link-container a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .back-link-container a:hover {
+            background-color: #2980b9;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="print-button-container">
+            <button onclick="window.print()" class="px-6 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition">Print Resume</button>
+        </div>
+
+        <h1>James Gilbert</h1>
+        <div class="contact-info">
+            [Your Phone Number] | <a href="mailto:your.email@example.com">[Your Email Address]</a><br>
+            <a href="[Your LinkedIn Profile URL]" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a> | 
+            <a href="[Your Portfolio Website URL]" target="_blank" rel="noopener noreferrer">Portfolio Website</a>
+        </div>
+
+        <div class="section">
+            <h2>Summary</h2>
+            <p>
+                A highly motivated and resourceful Amateur Inventor and Professional Tinkerer with a diverse, self-taught skill set spanning programming, robotics, 3D printing, electronics, and practical engineering. Driven by an insatiable curiosity ("I wonder if...") and a tenacious problem-solving approach ("Here's how I did it"). Proven ability to rapidly learn new technologies and apply them to create innovative solutions, from complex AI systems and custom robotics to large-scale 3D printers and entrepreneurial ventures. Eager to apply a unique blend of technical acumen, creative ingenuity, and a relentless drive for efficiency and mastery to a challenging role that fosters continuous learning and impactful creation. Seeking to contribute to [mention type of company/field, e.g., conservation technology, R&D, innovative product development, a company that values inventive problem-solving].
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="skills-category">
+                <strong>Programming & Software:</strong>
+                <ul>
+                    <li>Languages: Python (Scripting, Automation, Project Development), C++, Java, HTML, CSS</li>
+                    <li>AI/ML: Conceptual understanding of AI architectures, Reinforcement Learning, Knowledge Base design (as demonstrated in "Praxis" project)</li>
+                    <li>3D Modeling & Design: Blender, SketchUp, 3D Builder, CAD/CAM, 2D to 3D Conversion</li>
+                    <li>Web Technologies: Basic Web Development, Shopify</li>
+                    <li>Productivity: Microsoft Office Suite (Excel, Word), Zendesk, Virtual Team Collaboration Tools</li>
+                </ul>
+            </div>
+            <div class="skills-category">
+                <strong>3D Printing & Additive Manufacturing:</strong>
+                <ul>
+                    <li>Technologies: FDM, SLA/DLP</li>
+                    <li>Hardware: Custom 3D Printer Design & Construction (including 2m² scale), Servicing, Repair, Calibration</li>
+                    <li>Firmware: RepRap, Marlin, Klipper, Duet3D</li>
+                    <li>Consultancy: Advising on 3D printing solutions and workflows</li>
+                </ul>
+            </div>
+            <div class="skills-category">
+                <strong>Robotics & Electronics:</strong>
+                <ul>
+                    <li>Design & Fabrication: Robot Design, Mechanical Assembly, Sensor Integration</li>
+                    <li>Programming & Control: Python for robotics, Control Systems (e.g., L298N, PCA9685)</li>
+                    <li>Microcontrollers: Arduino Uno R3, Raspberry Pi (3 Model B, Model A+), Microbit v1 & Sensor Shield</li>
+                    <li>Components: Extensive hands-on experience with a wide array of sensors (temperature, ultrasonic, PIR, IR, sound, tilt, impact, line, distance), actuators (motors, servos, pumps, lasers), power modules, communication modules (USB WiFi), displays (LCD 1602, MRD-114-IPS-LCD-8P), and cameras (Pi Camera Rev 1.3).</li>
+                    <li>Skills: Soldering, Circuit Design & Troubleshooting, Hardware Hacking</li>
+                </ul>
+            </div>
+            <div class="skills-category">
+                <strong>Practical & Mechanical:</strong>
+                <ul>
+                    <li>Carpentry: 10+ years (1st & 2nd Fix, Bespoke, NVQ Level 2)</li>
+                    <li>Maintenance & Repair: 5+ years (General, AV Systems, Electrical, Plumbing, Upholstery)</li>
+                    <li>Troubleshooting: 10+ years across diverse mechanical and electronic systems</li>
+                    <li>Lock Picking: 1 year trainee experience</li>
+                </ul>
+            </div>
+            <div class="skills-category">
+                <strong>Business & Interpersonal:</strong>
+                <ul>
+                    <li>Entrepreneurship: Business Ownership (Giblets Creations - CEO & Founder), Sales, Marketing, Advertising (B2B), Sales Processes & Operations</li>
+                    <li>Project Management: Production Management, Project Coordination, Quality Control, Lean Manufacturing Principles, Testing</li>
+                    <li>Customer Relations: Customer Service Operations, Customer Support, Technical Support, Customer Satisfaction</li>
+                    <li>Communication: Presentations, Clear articulation of technical concepts</li>
+                    <li>Personal Attributes: High Learning Agility, Adaptability, Tenacity, Resilience, Problem-Solving, Efficiency-focused, Meticulous Planning, Time Management, Independent & Team Contributor</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Key Projects</h2>
+            <div>
+                <h3 class="project-title">"Praxis" - Self-Evolving AI System | Personal Project (Ongoing)</h3>
+                <ul>
+                    <li>Conceptualized and actively developing an experimental, modular AI architecture designed for self-monitoring, learning from inefficiencies, and dynamic restructuring.</li>
+                    <li>Architecture incorporates MetaAgent, TaskAgents, SkillAgents, MutationEngine, FitnessEngine, and a KnowledgeBase with FactMemory, leveraging principles of bio-inspired emergent intelligence and iterative evolution.</li>
+                    <li>Objective: To create an AI that can autonomously improve its performance and adapt its structure to new tasks and challenges, with a long-term vision for physical embodiment.</li>
+                    <li>Technologies/Concepts: Python, AI Design Principles, Reinforcement Learning concepts, Modular System Architecture.</li>
+                    <li><em>Status: Currently in [describe current phase, e.g., core architecture design, initial module implementation, testing foundational learning loops].</em></li>
+                </ul>
+            </div>
+            <div style="margin-top:15px;">
+                <h3 class="project-title">Gismo - Multi-Sensor Robot | Personal Project</h3>
+                <ul>
+                    <li>Designed, fabricated, and programmed a multi-sensor autonomous robot platform to explore robotics and sensor integration.</li>
+                    <li>Integrated Raspberry Pi Zero 2W, PCA9685 servo driver, SSD1306 OLED display, MPU9250 IMU, Pi Camera, and L298N motor drivers.</li>
+                    <li>Incorporated a diverse suite of sensors including edge detection, IR proximity, touch, ultrasonic distance, and sound sensors for environmental interaction and data gathering.</li>
+                    <li>Developed functional motor control code in Python for navigation and movement.</li>
+                    <li>Outcome: Successfully created a versatile robotics testbed for experimenting with sensor fusion, navigation algorithms, and computer vision, enhancing practical robotics skills.</li>
+                </ul>
+            </div>
+            <div style="margin-top:15px;">
+                <h3 class="project-title">Custom Large-Scale 3D Printer (1.2m Build Volume) | Personal Project</h3>
+                <ul>
+                    <li>Engineered and constructed a large-format FDM 3D printer with a 1.2-meter build envelope from the ground up.</li>
+                    <li>Key Features: Independent heated beds for material versatility, Duet Mini 5 controller, Duet Toolboard for advanced extruder control, and Raspberry Pi integration (e.g., for Klipper/OctoPrint).</li>
+                    <li>Managed all project phases: mechanical design, component sourcing, precision assembly, complex wiring, firmware configuration (Marlin/Klipper), and extensive troubleshooting to achieve operational excellence.</li>
+                    <li>Outcome: A fully functional, custom-built large-scale printer capable of producing substantial parts, demonstrating advanced understanding of 3D printer mechanics, electronics, and system integration.</li>
+                </ul>
+            </div>
+             <div style="margin-top:15px;">
+                <h3 class="project-title">Giblets Creations - 3D Printed Model Kits | Founder & CEO</h3>
+                <p class="date-location">[Start Year] – [End Year]</p>
+                <ul>
+                    <li>Founded and managed an entrepreneurial venture specializing in the design, manufacture, and sale of 1980s nostalgia-themed 3D-printed model kits.</li>
+                    <li>Designed original models using Blender/SketchUp, optimized for 3D printing, and operated a small 3D printer farm (up to 4 FDM/SLA/DLP printers).</li>
+                    <li>Directed all business operations: e-commerce website development (Shopify), online sales (Facebook, eBay), marketing campaigns, customer service, inventory management, order fulfillment, and participation in shows/events.</li>
+                    <li>Explored Augmented Reality (AR) for innovative product promotion.</li>
+                    <li>Outcome: Successfully established and ran a niche small business, gaining comprehensive experience in product development lifecycle, manufacturing, sales, digital marketing, and customer relations.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Professional Experience</h2>
+            <div>
+                <h3 class="job-title">Caretaker</h3>
+                <p class="date-location">Heyford Park School, [Location] | October 2023 – Present</p>
+                <ul>
+                    <li>Responsible for general site maintenance, security protocols, health and safety compliance, and operational support for school activities.</li>
+                    <li>Proactively devised and implemented an optimized system for exam desk setup, significantly reducing setup time by [mention % or hours saved if possible] and improving overall efficiency.</li>
+                    <li><em>Demonstrates reliability, practical problem-solving, and commitment in a structured environment.</em></li>
+                </ul>
+            </div>
+            <div style="margin-top:15px;">
+                <h3 class="job-title">Maintenance Engineer</h3>
+                <p class="date-location">Vans for Bands, Kidlington | [Start Year] – [End Year]</p>
+                <ul>
+                    <li>Maintained and repaired a diverse fleet of tour buses, from VW splitters to double-decker coaches, ensuring operational readiness and safety.</li>
+                    <li>Performed comprehensive interior fit-outs (carpentry, upholstery), AV system troubleshooting and repair, electrical diagnostics, and plumbing maintenance.</li>
+                    <li><em>Left under good circumstances to dedicate more focus to rapidly advancing interests and opportunities in 3D printing and personal invention projects.</em></li>
+                </ul>
+            </div>
+            <div style="margin-top:15px;">
+                <h3 class="job-title">Carpenter</h3>
+                <p class="date-location">[Company Name or Self-Employed], [Location] | [Start Year] – [End Year]</p>
+                <ul>
+                    <li>Provided skilled carpentry services including 1st and 2nd fix, bespoke furniture creation, and general woodworking for residential and commercial clients. (NVQ Level 2 Qualified).</li>
+                </ul>
+            </div>
+            <div style="margin-top:15px;">
+                <h3 class="job-title">Locksmith Trainee</h3>
+                <p class="date-location">[Company Name], [Location] | [Start Year] – [End Year]</p>
+                <ul>
+                    <li>Gained foundational experience in lock mechanisms, picking techniques, and security system principles.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Education & Certifications</h2>
+            <ul>
+                <li>NVQ Level 2 in Carpentry & Joinery</li>
+                <li>CSCS Card Holder (Current)</li>
+                <li>DBS Certificate (Current)</li>
+                <li><strong>Self-Directed Learning:</strong> Continuous, in-depth study and practical application in Programming (Python, C++, Java), Robotics, AI Concepts, Advanced 3D Printing Technologies, Electronics Design & Fabrication.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Interests (Optional)</h2>
+            <ul>
+                <li>Inventing and prototyping novel devices and software systems.</li>
+                <li>Exploring emerging technologies, particularly in AI, robotics, and additive manufacturing.</li>
+                <li>Restoring and tinkering with vintage electronics and mechanical devices.</li>
+                <li>Continuous learning and skill development across diverse technical fields.</li>
+            </ul>
+        </div>
+        <div class="back-link-container">
+            <a href="index.html">← Back to Portfolio</a>
+        </div>
+    </div>
+</body>
+</html>
